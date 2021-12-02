@@ -138,9 +138,11 @@ Here are the configuration properties:
 
 * `jdbc_connection_string`: jdbc url used to connect to database
 
-For Oracle jdbc\:oracle\:thin\:@//ip\:post/service_name
-For Postgresql jdbc:postgresql://ip:port/database_name
-For Sqlserver jdbc:sqlserver://ip:port;databaseName=database_name
+        For Oracle jdbc\:oracle\:thin\:@//ip\:post/service_name
+        
+        For Postgresql jdbc:postgresql://ip:port/database_name
+
+        For Sqlserver jdbc:sqlserver://ip:port;databaseName=database_name
 * `username`: username used to connect to database
 * `password` : password of username used to connect to database (will be stored as *** after you safe config file)
 * `log_level`: DEBUG OR INFO
@@ -171,14 +173,6 @@ Example of project.properties (select project from Projects then Project Setting
         resources.source.1.type=DBResourceModelSource
 
         ...
-
-
-
-Note: Rundeck 2.6.3+ uses an asynchronous nodes cache by
-default. You should enable `synchronousLoad` if you are using the
-rundeck nodes cache, or set the `refreshInterval` to 0.
-
-
 
 
 
