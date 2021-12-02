@@ -70,6 +70,18 @@ done
 
 Compatible with Rundeck 2.3.x+
 
+Create source tables
+====
+
+Connect to the database and create source tables (or views). As a starting point you can use : 
+
+*    [resources/create_oracle_sample_tables.sql](resources/create_oracle_sample_tables.sql)
+*    [resources/create_postgresql_sample_tables.sql](resources/create_postgresql_sample_tables.sql)
+*    [resources/create_sqlserver_sample_tables.sql](resources/create_sqlserver_sample_tables.sql)
+
+
+
+
 Install from release
 ====
 
@@ -124,18 +136,6 @@ Execute  edit resources/test.properties
 Execute  test.bat
 
 If everything is ok, copy dist/DBResourceModelSource.jar to $RDECK_BASE/libext directory
-
-
-After download/Build from scratch and install,  create source tables
-====
-
-Connect to the database and create source tables (or views). As a starting point you can use : 
-
-*    [resources/create_oracle_sample_tables.sql](resources/create_oracle_sample_tables.sql)
-*    [resources/create_postgresql_sample_tables.sql](resources/create_postgresql_sample_tables.sql)
-*    [resources/create_sqlserver_sample_tables.sql](resources/create_sqlserver_sample_tables.sql)
-
-
 
 
 Usage
