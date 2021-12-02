@@ -1,0 +1,2 @@
+rem Lib directory must contain rundeck-core.jar
+java -classpath dist\DBResourceModelSource.jar;lib\rundeck-core.jar;lib\oracle.jar;lib\sqlserver.jar;lib\postgresql.jar  com.rundeck.plugins.oro.DBResourceModelSourceTest resources\test.properties
