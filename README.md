@@ -23,7 +23,7 @@ As a result, you will have a list of nodes that can be filtered by specific TAGS
 
 Lets imagine you want to automate some tasks on your databases. Each node can host one or more databases. You want to execute an inline script that will run a specific query on each database. For that, you need to loop on all database running on a particular host, "su" as the user runnning specific database, set up specific environment variables and execute required query. 
 
-First setup metadata table and source data table/view (see  [resources/create_postgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)) 
+First setup metadata table and source data table/view (see  [resources/create_postgresql_sample_tables.sql](resources/create_postgresql_sample_tables.sql)) 
 
 Your node will look like this (see attributes like DATABAE_ROLE, DB_UNIQ_NAME, ORACLE_HOME that acts as one-dimensioal array with values separated by spaces). ![rundeck node](resources/node_img.jpg?raw=true "Rundeck node example")
 
@@ -124,7 +124,7 @@ Create source tables
 1. Connect to the database and create source tables (or views). As a starting point you can use : 
 
 *    [resources/create_oracle_sample_tables.sql](resources/create_oracle_sample_tables.sql)
-*    [resources/create_postgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)
+*    [resources/create_postgresql_sample_tables.sql](resources/create_postgresql_sample_tables.sql)
 *    [resources/create_sqlserver_sample_tables.sql](resources/create_sqlserver_sample_tables.sql)
 
 
