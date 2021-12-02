@@ -5,21 +5,21 @@ This is a [Rundeck Node Executor plugin][1] that uses JDBC to connect to a datab
 
 This pluging uses 2 tables/views in order to generate list of nodes. 
 
-        One metadata table/view with to columns: column_name, column_role to describe source table/view.
+One metadata table/view with to columns: column_name, column_role to describe source table/view.
 
-        All column_name from metatata table will be selected from source table/view. Each column_name can have one ore more column roles separated by space:HOST_NAME NODE_NAME USERNAME TAG ATTRIBUTE ATTR_SINGLE
+All column_name from metatata table will be selected from source table/view. Each column_name can have one ore more column roles separated by space:HOST_NAME NODE_NAME USERNAME TAG ATTRIBUTE ATTR_SINGLE
 
-        All rows from source table will be aggregated by column with role HOST_NAME and order by this column.
+All rows from source table will be aggregated by column with role HOST_NAME and order by this column.
 
-        If more than one line contains the same HOST_NAME then columns with column_role ATTRIBURE will aggregate their values in a ATTRIBUTETE named COLUMN_NAME separated by space. 
+If more than one line contains the same HOST_NAME then columns with column_role ATTRIBURE will aggregate their values in a ATTRIBUTETE named COLUMN_NAME separated by space. 
         
-        If column_role contains TAG, column_value will be added as TAG (if it does't exists yes). If column_role is ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last row of that particular HOST_NAME. 
+If column_role contains TAG, column_value will be added as TAG (if it does't exists yes). If column_role is ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last row of that particular HOST_NAME. 
 
-        If column_role contains role USERNAME, node will have USERNAME value setup.  
+If column_role contains role USERNAME, node will have USERNAME value setup.  
 
-        If column_role contains role NODENAME, node will have NODENAME value setup.
+If column_role contains role NODENAME, node will have NODENAME value setup.
 
-        As a result, you will have a list of nodes that can be filtered by specific TAGS or ATTRIBUTES. Some attributes will act as one-dimensional array with values separated by spaces. Of course you could play with more separators to obtain multi-dimensional arrays. Eg. first separated by spaces then separated by commas.
+As a result, you will have a list of nodes that can be filtered by specific TAGS or ATTRIBUTES. Some attributes will act as one-dimensional array with values separated by spaces. Of course you could play with more separators to obtain multi-dimensional arrays. Eg. first separated by spaces then separated by commas.
 
 Lets imagine you want to automate some tasks on your databases. Each node can host one or more databases. You want to execute an inline script that will run a specific query on each database. For that you need to loop on all database running on a particular host, su as the user runnning specific database, set up specific environment variables and execute required query. 
 
