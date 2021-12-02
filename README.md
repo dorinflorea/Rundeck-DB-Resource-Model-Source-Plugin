@@ -150,27 +150,27 @@ For Sqlserver jdbc:sqlserver://ip:port;databaseName=database_name
 
 Example of project.properties (select project from Projects then Project Settings/Edit Configuration/Edit Configuration File)
 
-project.description=bla bla
+        project.description=bla bla
 
-...
+        ...
 
-resources.source.1.config.jdbc_connection_string=jdbc\:oracle\:thin\:@//172.0.0.1\:1521/orcl
+        resources.source.1.config.jdbc_connection_string=jdbc\:oracle\:thin\:@//172.0.0.1\:1521/orcl
 
-resources.source.1.config.log_level=INFO
+        resources.source.1.config.log_level=INFO
 
-resources.source.1.config.password=*****
+        resources.source.1.config.password=*****
 
-resources.source.1.config.provider=Oracle
+        resources.source.1.config.provider=Oracle
 
-resources.source.1.config.table_columns=databases_rundeck_columns
+        resources.source.1.config.table_columns=databases_rundeck_columns
 
-resources.source.1.config.table_data=databases_data
+        resources.source.1.config.table_data=databases_data
 
-resources.source.1.config.username=rundeck
+        resources.source.1.config.username=rundeck
 
-resources.source.1.type=DBResourceModelSource
+        resources.source.1.type=DBResourceModelSource
 
-...
+        ...
 
 
 
