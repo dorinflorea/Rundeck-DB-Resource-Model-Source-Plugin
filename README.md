@@ -88,11 +88,17 @@ Install from release
 Download from the [releases page](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/releases).
 Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql (already included, only if you prefer different versions)
 
-    Oracle: https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
+Oracle: 
 
-    Sqlserver: https://github.com/microsoft/mssql-jdbc/releases/tag/v9.4.0
+        https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
 
-    Postgresql: https://jdbc.postgresql.org/download.html
+Sqlserver: 
+
+        https://github.com/microsoft/mssql-jdbc/releases/tag/v9.4.0
+
+Postgresql: 
+
+        https://jdbc.postgresql.org/download.html
 
 For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
 
@@ -113,12 +119,15 @@ Download
 * Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql
 
 Oracle: 
+
         https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
 
 Sqlserver: 
+
         https://github.com/microsoft/mssql-jdbc/releases/  tag/v9.4.0 already included in current release
 
 Postgresql: 
+
         https://jdbc.postgresql.org/download.html  9.4-1202 JDBC 42 already included in current release
 
 For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
