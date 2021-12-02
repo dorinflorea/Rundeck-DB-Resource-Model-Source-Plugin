@@ -5,15 +5,17 @@ This is a [Rundeck Node Executor plugin][1] that uses JDBC to connect to a datab
 
 This pluging uses 2 tables/views in order to generate list of nodes. 
 
-One metadata table/view with to columns: column_name, column_role to describe source table/view.
+One metadata table/view (named DATABASES_RUNDECK_COLUMNS but can use a different name, plugin parameter table_columns will specify the final name): column_name, column_role to describe source table/view columns (named DATABASES_DATA but can use a different name, plugin parameter table_data will specify the final name).
 
-All column_name from metatata table will be selected from source table/view. Each column_name can have one ore more column roles separated by space:HOST_NAME NODE_NAME USERNAME TAG ATTRIBUTE ATTR_SINGLE
+All column_name from metadata table will be selected from source table/view. Each column_name can have one ore more column roles separated by space:HOST_NAME NODE_NAME USERNAME TAG ATTRIBUTE ATTR_SINGLE
 
 All rows from source table will be aggregated by column with role HOST_NAME and order by this column.
 
-If more than one line contains the same HOST_NAME then columns with column_role ATTRIBURE will aggregate their values in a ATTRIBUTE named COLUMN_NAME separated by spaces. 
+If more than one line contains the same HOST_NAME then columns with column_role ATTRIBUTE will aggregate their values in a ATTRIBUTE named COLUMN_NAME separated by spaces. 
         
-If column_role contains TAG, column_value will be added as TAG (if it does't exists yet). If column_role contains ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last row of that particular HOST_NAME. 
+If column_role contains TAG, column_value will be added as TAG (if it does't exists yet). 
+
+If column_role contains ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last line of that particular HOST_NAME. 
 
 If column_role contains role USERNAME, node will have USERNAME value setup.  
 
