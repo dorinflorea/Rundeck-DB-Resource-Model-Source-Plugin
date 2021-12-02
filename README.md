@@ -11,9 +11,9 @@ All column_name from metatata table will be selected from source table/view. Eac
 
 All rows from source table will be aggregated by column with role HOST_NAME and order by this column.
 
-If more than one line contains the same HOST_NAME then columns with column_role ATTRIBURE will aggregate their values in a ATTRIBUTETE named COLUMN_NAME separated by space. 
+If more than one line contains the same HOST_NAME then columns with column_role ATTRIBURE will aggregate their values in a ATTRIBUTE named COLUMN_NAME separated by spaces. 
         
-If column_role contains TAG, column_value will be added as TAG (if it does't exists yes). If column_role is ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last row of that particular HOST_NAME. 
+If column_role contains TAG, column_value will be added as TAG (if it does't exists yet). If column_role contains ATTR_SINGLE, an attribute named COLUMN_NAME will be created and his value will be the the value of the last row of that particular HOST_NAME. 
 
 If column_role contains role USERNAME, node will have USERNAME value setup.  
 
@@ -21,9 +21,9 @@ If column_role contains role NODENAME, node will have NODENAME value setup.
 
 As a result, you will have a list of nodes that can be filtered by specific TAGS or ATTRIBUTES. Some attributes will act as one-dimensional array with values separated by spaces. Of course you could play with more separators to obtain multi-dimensional arrays. Eg. first separated by spaces then separated by commas.
 
-Lets imagine you want to automate some tasks on your databases. Each node can host one or more databases. You want to execute an inline script that will run a specific query on each database. For that you need to loop on all database running on a particular host, su as the user runnning specific database, set up specific environment variables and execute required query. 
+Lets imagine you want to automate some tasks on your databases. Each node can host one or more databases. You want to execute an inline script that will run a specific query on each database. For that, you need to loop on all database running on a particular host, "su" as the user runnning specific database, set up specific environment variables and execute required query. 
 
-First setup metadata table and source data table/view (see  [resources/create_posgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)) 
+First setup metadata table and source data table/view (see  [resources/create_postgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)) 
 
 Your node will look like this (see attributes like DATABAE_ROLE, DB_UNIQ_NAME, ORACLE_HOME that acts as one-dimensioal array with values separated by spaces). ![rundeck node](resources/node_img.jpg?raw=true "Rundeck node example")
 
@@ -124,7 +124,7 @@ Create source tables
 1. Connect to the database and create source tables (or views). As a starting point you can use : 
 
 *    [resources/create_oracle_sample_tables.sql](resources/create_oracle_sample_tables.sql)
-*    [resources/create_posgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)
+*    [resources/create_postgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)
 *    [resources/create_sqlserver_sample_tables.sql](resources/create_sqlserver_sample_tables.sql)
 
 
