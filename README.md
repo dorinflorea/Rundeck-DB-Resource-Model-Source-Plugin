@@ -107,17 +107,24 @@ Copy the `DBResourceModelSource-x.x.x.jar` to the $RDECK_BASE/libext directory f
 Build from scratch and install
 ====
 
-Download 
+Download [Sources](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/archive/refs/heads/main.zip)
 
-* [Sources](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/archive/refs/heads/main.zip)
-* rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from https://www.rundeck.com/downloads and put the jar rundeck-core-x.x.x/jar in lib directory as rundeck-core.jar
-* Download jdbc vendor specific jar file. Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html), optional for [Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) and [Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
+Download rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from https://www.rundeck.com/downloads and put the jar rundeck-core-x.x.x/jar in lib directory as rundeck-core.jar
 
-For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
+Download jdbc vendor specific jar file. 
 
-For Posgresql if you want to replace existing driver ( https://jdbc.postgresql.org/download/postgresql-9.4-1202.jdbc42.jar )you should rename the driver to postgresql.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/postgresql.jar 
+Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
 
-For Sqlserver if you want to replace existing driver ( https://github.com/microsoft/mssql-jdbc/releases/download/v9.4.0/mssql-jdbc-9.4.0.jre8.jar ) you should rename the driver to sqlserver.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/sqlserver.jar 
+Optional for [Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
+   
+Optional for [Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
+
+* For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
+
+* For Posgresql if you want to replace existing driver ( https://jdbc.postgresql.org/download/postgresql-9.4-1202.jdbc42.jar )you should rename the driver to postgresql.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/postgresql.jar 
+
+* For Sqlserver if you want to replace existing driver ( https://github.com/microsoft/mssql-jdbc/releases/download/v9.4.0/mssql-jdbc-9.4.0.jre8.jar ) you should rename the driver to sqlserver.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/sqlserver.jar 
+
 
 Execute build.bat 
 
