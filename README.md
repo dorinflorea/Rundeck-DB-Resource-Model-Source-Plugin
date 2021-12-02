@@ -110,13 +110,15 @@ Download rundeck core library :from your rundeck install directory /var/lig/rund
 
 Download jdbc vendor specific jar file depending on which type of database is used to store metadata table and data table. 
 
-Only one is needed.
+Oracle is mandatory for building phase even if target database is not Oracle.   
 
 Download [Oracle driver](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html) then rename the driver to oracle.jar and put it in lib directory 
 
 Or download [Sqlserver driver](https://github.com/microsoft/mssql-jdbc/releases/) then rename the driver to sqlserver.jar and put it in lib directory
    
 Or download [Posgresql driver](https://jdbc.postgresql.org/download.html) then rename the driver to postgresql.jar and put it in lib directory
+
+Edit JAVA_HOME in all *.bat files
 
 Execute build.bat 
 
