@@ -5,7 +5,7 @@ This is a [Rundeck Node Executor plugin][1] that uses JDBC to connect to a datab
 
 This pluging uses 2 tables/views in order to generate list of nodes. 
 
-One metadata table/view (named DATABASES_RUNDECK_COLUMNS but can use a different name, plugin parameter table_columns will specify the final name): column_name, column_role to describe source table/view columns (named DATABASES_DATA but can use a different name, plugin parameter table_data will specify the final name).
+One metadata table/view (named DATABASES_RUNDECK_COLUMNS but can use a different name, plugin parameter table_columns will specify the final name): column_name, column_role to describe data table/view columns (named DATABASES_DATA but can use a different name, plugin parameter table_data will specify the final name).
 
 All column_name from metadata table will be selected from source table/view. Each column_name can have one ore more column roles separated by space:HOST_NAME NODE_NAME USERNAME TAG ATTRIBUTE ATTR_SINGLE
 
@@ -89,7 +89,7 @@ Install from release
 
 Download from the [releases page](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/releases).
 
-Download jdbc vendor specific jar file. 
+Download jdbc vendor specific jar file depending on which type of database is used to store metadata table and data table.  
 
 Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
 
@@ -113,21 +113,20 @@ Download [Sources](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Sour
 
 Download rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from https://www.rundeck.com/downloads and put the jar rundeck-core-x.x.x/jar in lib directory as rundeck-core.jar
 
-Download jdbc vendor specific jar file. 
+Download jdbc vendor specific jar file depending on which type of database is used to store metadata table and data table. 
 
-Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
+[Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
 
-Optional for [Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
+[Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
    
-Optional for [Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
+[Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
 
-* For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
+* For Oracle you should rename the driver to oracle.jar and put it in lib directory 
 
-* For Posgresql if you want to replace existing driver ( https://jdbc.postgresql.org/download/postgresql-9.4-1202.jdbc42.jar )you should rename the driver to postgresql.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/postgresql.jar 
+* For Posgresql you should rename the driver to postgresql.jar and put it in lib directory
 
-* For Sqlserver if you want to replace existing driver ( https://github.com/microsoft/mssql-jdbc/releases/download/v9.4.0/mssql-jdbc-9.4.0.jre8.jar ) you should rename the driver to sqlserver.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/sqlserver.jar 
-
-
+* For Sqlserver you should rename the driver to sqlserver.jar and put it in lib directory
+ 
 Execute build.bat 
 
 Execute  dist.bat
