@@ -89,11 +89,11 @@ Download from the [releases page](https://github.com/dorinflorea/Rundeck-DB-Reso
 
 Download jdbc vendor specific jar file. 
 
-    Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
+Mandatory for [Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
 
-    Optional for [Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
-    
-    Optional for [Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
+Optional for [Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
+   
+Optional for [Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
 
 * For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
 
