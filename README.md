@@ -25,7 +25,7 @@ Lets imagine you want to automate some tasks on your databases. Each node can ho
 
 First setup metadata table and source data table/view (see  [resources/create_posgresql_sample_tables.sql]resources/create_postgresql_sample_tables.sql)) 
 
-Your node will look like this (see attributes like DATABAE_ROLE, DB_UNIQ_NAME, ORACLE_HOME that acts as one-dimensioal array with values separated by spaces). ![rundeck node](resurces/node_img.jpg?raw=true "Rundeck node example")
+Your node will look like this (see attributes like DATABAE_ROLE, DB_UNIQ_NAME, ORACLE_HOME that acts as one-dimensioal array with values separated by spaces). ![rundeck node](resources/node_img.jpg?raw=true "Rundeck node example")
 
 Your inline script that will execute on each node will look like this:
 ```
