@@ -73,7 +73,7 @@ Compatible with Rundeck 2.3.x+
 Install from release
 ====
 
-Download from the [releases page](github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/releases).
+Download from the [releases page](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/releases).
 Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql (already included)
 
     Oracle: https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
