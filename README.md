@@ -122,6 +122,7 @@ Edit JAVA_HOME in all *.bat files
 
 Execute build.bat 
 
+Comment/uncomment required jar file update in dist.bat
 Execute  dist.bat
 
 Execute  edit resources/test.properties
