@@ -110,18 +110,12 @@ Download rundeck core library :from your rundeck install directory /var/lig/rund
 
 Download jdbc vendor specific jar file depending on which type of database is used to store metadata table and data table. 
 
-[Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html)
+[Oracle](https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html) then rename the driver to oracle.jar and put it in lib directory 
 
-[Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) 
+[Sqlserver tag/v9.4.0 already included in current release](https://github.com/microsoft/mssql-jdbc/releases/) then rename the driver to sqlserver.jar and put it in lib directory
    
-[Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html)
+[Posgresql 9.4-1202 JDBC 42 already included in current release](https://jdbc.postgresql.org/download.html) then rename the driver to postgresql.jar and put it in lib directory
 
-* For Oracle you should rename the driver to oracle.jar and put it in lib directory 
-
-* For Posgresql you should rename the driver to postgresql.jar and put it in lib directory
-
-* For Sqlserver you should rename the driver to sqlserver.jar and put it in lib directory
- 
 Execute build.bat 
 
 Execute  dist.bat
