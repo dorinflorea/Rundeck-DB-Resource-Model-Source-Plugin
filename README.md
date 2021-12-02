@@ -95,7 +95,7 @@ Copy the `DBResourceModelSource-x.x.x.jar` to the $RDECK_BASE/libext directory f
 ====
 
 1.1 Download 
-* [Sources]https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/archive/refs/heads/main.zip)
+* [Sources](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/archive/refs/heads/main.zip)
 * rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from http://rundeck.org/... and put the jar in lib directory as rundeck-core.jar
 * Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql
 
