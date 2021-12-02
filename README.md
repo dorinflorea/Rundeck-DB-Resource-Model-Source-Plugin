@@ -27,7 +27,7 @@ First setup metadata table and source data table/view (see  [resources/create_po
 
 Your node will look like this (see attributes like DATABAE_ROLE, DB_UNIQ_NAME, ORACLE_HOME that acts as one-dimensioal array with values separated by spaces). ![rundeck node](resources/node_img.jpg?raw=true "Rundeck node example")
 
-Your inline script that will execute on each node will look like this:
+Your inline script that will be executed on each node will look like this:
 ```
 if [ `uname -s ` = "HP-UX" -o  `uname -s ` = "AIX" ]
 then
@@ -74,7 +74,7 @@ Install from release
 ====
 
 Download from the [releases page](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/releases).
-Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql (already included)
+Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql (already included, only if you prefer different versions)
 
     Oracle: https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
 
@@ -91,19 +91,23 @@ For Sqlserver if you want to replace existing driver ( https://github.com/micros
 Copy the `DBResourceModelSource-x.x.x.jar` to the $RDECK_BASE/libext directory for Rundeck.
 
     
-2. Build from scratch and install
+Build from scratch and install
 ====
 
-1.1 Download 
+Download 
+
 * [Sources](https://github.com/dorinflorea/Rundeck-DB-Resource-Model-Source-Plugin/archive/refs/heads/main.zip)
-* rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from http://rundeck.org/... and put the jar in lib directory as rundeck-core.jar
+* rundeck core library :from your rundeck install directory /var/lig/rundeck/libext or from https://www.rundeck.com/downloads and put the jar rundeck-core-x.x.x/jar in lib directory as rundeck-core.jar
 * Download jdbc vendor specific jar file. Mandatory for Oracle, optional for Sqlserver and Posgresql
 
-    Oracle: https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
+Oracle: 
+        https://www.oracle.com/database/technologies/appdev/jdbc-ucp-21-3-downloads.html 
 
-    Sqlserver: https://github.com/microsoft/mssql-jdbc/releases/tag/v9.4.0
+Sqlserver: 
+        https://github.com/microsoft/mssql-jdbc/releases/  tag/v9.4.0 already included in current release
 
-    Postgresql: https://jdbc.postgresql.org/download.html
+Postgresql: 
+        https://jdbc.postgresql.org/download.html  9.4-1202 JDBC 42 already included in current release
 
 For Oracle you should rename the driver to oracle.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/oracle.jar 
 
@@ -111,17 +115,21 @@ For Posgresql if you want to replace existing driver ( https://jdbc.postgresql.o
 
 For Sqlserver if you want to replace existing driver ( https://github.com/microsoft/mssql-jdbc/releases/download/v9.4.0/mssql-jdbc-9.4.0.jre8.jar ) you should rename the driver to sqlserver.jar and add it to DBResourceModelSource-x.x.x.jar in lib directory using : jar -uvf dist/DBResourceModelSource-x.x.x.jar lib/sqlserver.jar 
 
-1.2 build.bat 
-1.3 dist.bat
-1.4 edit resources/test.properties
-1.5 test.bat
-1.6 if everything is ok, copy dist/DBResourceModelSource.jar to $RDECK_BASE/libext directory
+Execute build.bat 
+
+Execute  dist.bat
+
+Execute  edit resources/test.properties
+
+Execute  test.bat
+
+If everything is ok, copy dist/DBResourceModelSource.jar to $RDECK_BASE/libext directory
 
 
-Create source tables
+After download/Build from scratch and install,  create source tables
 ====
 
-1. Connect to the database and create source tables (or views). As a starting point you can use : 
+Connect to the database and create source tables (or views). As a starting point you can use : 
 
 *    [resources/create_oracle_sample_tables.sql](resources/create_oracle_sample_tables.sql)
 *    [resources/create_postgresql_sample_tables.sql](resources/create_postgresql_sample_tables.sql)
@@ -131,7 +139,7 @@ Create source tables
 
 
 Usage
------
+====
 
 You can configure the Resource Model Sources for a project either via the
 RunDeck GUI, under the "Admin" page, or you can modify the `project.properties`
@@ -190,8 +198,10 @@ rundeck nodes cache, or set the `refreshInterval` to 0.
 
 
 FAQ
-----
+====
 
 If node list is empty:
+
     * enable debugging by setting  resources.source.1.config.log_level=DEBUG
+
     * check /var/log/rundeck/service.log 
